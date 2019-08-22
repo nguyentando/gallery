@@ -60,17 +60,18 @@ class PhotoBoundaryCallback(
                     })
         } else {
             photoDao.getCount()
-                .map { it / AppDatabase.PAGE_SIZE + 1 } // from count to page
-                .flatMap { photoApi.getPhotos(it, AppDatabase.PAGE_SIZE) } // from page to photoList
+                .map { count -> count / AppDatabase.PAGE_SIZE + 1 } // from count to page
+                .flatMap { page -> photoApi.getPhotos(page, AppDatabase.PAGE_SIZE) } // from page to photoApiList
                 .subscribeOn(Schedulers.io())
                 .observeOn(Schedulers.io())
-                .map { mapper.mapFromList(it) }
+                .map { photoApiList -> mapper.mapFromList(photoApiList) } // from api data to local data
                 .subscribe(
-                    {
-                        photoDao.insertItems(it)
+                    { photoList ->
+                        photoDao.insertItems(photoList)
                         isRequestInProgress = false
-                    }, {
-                        errors.onNext(Result.failure(it.message.orEmpty()))
+                    },
+                    { throwable ->
+                        errors.onNext(Result.failure(throwable.message.orEmpty()))
                         isRequestInProgress = false
                     })
         }
