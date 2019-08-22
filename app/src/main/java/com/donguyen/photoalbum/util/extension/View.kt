@@ -3,7 +3,7 @@ package com.donguyen.photoalbum.util.extension
 import android.view.View
 
 /**
- * Created by DoNguyen on 9/3/19.
+ * Created by DoNguyen on 22/8/19.
  */
 fun View.isVisible() = this.visibility == View.VISIBLE
 

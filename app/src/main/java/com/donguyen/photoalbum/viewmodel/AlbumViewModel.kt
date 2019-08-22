@@ -12,7 +12,7 @@ import com.donguyen.photoalbum.util.extension.exhaustive
 import com.donguyen.photoalbum.view.AlbumViewState
 
 /**
- * Created by DoNguyen on 9/3/19.
+ * Created by DoNguyen on 22/8/19.
  */
 class AlbumViewModel(private val getPhotosUseCase: GetPhotosUseCase) : BaseViewModel() {
 

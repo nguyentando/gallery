@@ -17,7 +17,7 @@ import org.mockito.Mockito.*
 import org.mockito.junit.MockitoJUnitRunner
 
 /**
- * Created by DoNguyen on 10/3/19.
+ * Created by DoNguyen on 22/8/19.
  */
 @RunWith(MockitoJUnitRunner::class)
 class AlbumViewModelTest {

@@ -6,7 +6,7 @@ import androidx.room.Room
 import androidx.room.RoomDatabase
 
 /**
- * Created by DoNguyen on 9/3/19.
+ * Created by DoNguyen on 22/8/19.
  *
  * I used Room database instead of Realm intentionally to show how great it is when working with other libraries
  * in the Architecture Components.

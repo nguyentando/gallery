@@ -7,7 +7,7 @@ import com.donguyen.photoalbum.AlbumApplication
 import com.donguyen.photoalbum.di.component.BaseComponent
 
 /**
- * Created by DoNguyen on 9/3/19.
+ * Created by DoNguyen on 22/8/19.
  */
 val Context.albumApplication: AlbumApplication
     get() = applicationContext as AlbumApplication

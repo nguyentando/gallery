@@ -5,7 +5,7 @@ import androidx.paging.PagedList
 import org.mockito.Mockito.mock
 
 /**
- * Created by DoNguyen on 10/3/19.
+ * Created by DoNguyen on 22/8/19.
  */
 @Suppress("UNCHECKED_CAST")
 fun <T> createMockPagedList() = mock(PagedList::class.java) as PagedList<T>

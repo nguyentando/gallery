@@ -15,7 +15,7 @@ import io.reactivex.schedulers.Schedulers
 import io.reactivex.subjects.PublishSubject
 
 /**
- * Created by DoNguyen on 9/3/19.
+ * Created by DoNguyen on 22/8/19.
  */
 class PhotoBoundaryCallback(
     private var isRefresh: Boolean = false,

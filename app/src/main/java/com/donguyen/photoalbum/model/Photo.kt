@@ -1,7 +1,7 @@
 package com.donguyen.photoalbum.model
 
 /**
- * Created by DoNguyen on 9/3/19.
+ * Created by DoNguyen on 22/8/19.
  */
 data class Photo(
     var id: String,

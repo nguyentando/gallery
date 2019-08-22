@@ -5,7 +5,7 @@ import com.donguyen.photoalbum.usecase.Result
 import com.donguyen.photoalbum.usecase.Success
 
 /**
- * Created by DoNguyen on 9/3/19.
+ * Created by DoNguyen on 22/8/19.
  */
 interface Mapper<From, To> {
 

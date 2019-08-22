@@ -13,7 +13,7 @@ import com.donguyen.photoalbum.util.GlideApp
 import com.donguyen.photoalbum.view.PhotosAdapter.PhotoViewHolder
 
 /**
- * Created by DoNguyen on 9/3/19.
+ * Created by DoNguyen on 22/8/19.
  */
 class PhotosAdapter(private val listener: OnItemListener? = null) :
     PagedListAdapter<Photo, PhotoViewHolder>(COMPARATOR) {

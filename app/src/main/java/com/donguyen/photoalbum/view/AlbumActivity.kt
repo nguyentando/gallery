@@ -41,7 +41,7 @@ import javax.inject.Inject
 
 
 /**
- * Created by DoNguyen on 9/3/19.
+ * Created by DoNguyen on 22/8/19.
  */
 class AlbumActivity : BaseActivity(), SwipeRefreshLayout.OnRefreshListener, PhotosAdapter.OnItemListener {
 
@@ -207,7 +207,7 @@ class AlbumActivity : BaseActivity(), SwipeRefreshLayout.OnRefreshListener, Phot
         }
     }
 
-    // TODO can use a separate fragment to show the full-resolution photo. Just keep it simple for now
+    // TODO use a separate fragment to show the full-resolution photo. Just keep it simple for now
     private fun zoomImageFromThumb(thumbView: ImageView, photo: Photo) {
         currentFullPhoto = photo
 

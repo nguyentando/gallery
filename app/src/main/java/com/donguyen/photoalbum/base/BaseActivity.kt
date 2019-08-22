@@ -5,7 +5,7 @@ import androidx.appcompat.widget.Toolbar
 import com.donguyen.photoalbum.R
 
 /**
- * Created by DoNguyen on 9/3/19.
+ * Created by DoNguyen on 22/8/19.
  */
 abstract class BaseActivity : AppCompatActivity() {
 

@@ -4,7 +4,7 @@ import com.donguyen.photoalbum.util.rx.Transformer
 import io.reactivex.Observable
 
 /**
- * Created by DoNguyen on 9/3/19.
+ * Created by DoNguyen on 22/8/19.
  */
 abstract class UseCase<Input, Output>(private val transformer: Transformer<Result<Output>>? = null) {
 

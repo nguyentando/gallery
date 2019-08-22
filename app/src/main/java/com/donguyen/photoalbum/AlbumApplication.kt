@@ -9,7 +9,7 @@ import com.donguyen.photoalbum.di.module.DataModule
 import com.donguyen.photoalbum.di.module.NetworkModule
 
 /**
- * Created by DoNguyen on 9/3/19.
+ * Created by DoNguyen on 22/8/19.
  */
 class AlbumApplication : Application() {
 

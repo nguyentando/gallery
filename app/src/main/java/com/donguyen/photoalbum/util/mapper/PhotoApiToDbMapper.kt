@@ -6,7 +6,7 @@ import javax.inject.Inject
 import javax.inject.Singleton
 
 /**
- * Created by DoNguyen on 9/3/19.
+ * Created by DoNguyen on 22/8/19.
  */
 @Singleton
 class PhotoApiToDbMapper @Inject constructor() : Mapper<PhotoApiData, PhotoData> {

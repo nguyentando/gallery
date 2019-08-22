@@ -6,7 +6,7 @@ import com.donguyen.photoalbum.view.AlbumActivity
 import dagger.Subcomponent
 
 /**
- * Created by DoNguyen on 9/3/19.
+ * Created by DoNguyen on 22/8/19.
  */
 @PerActivity
 @Subcomponent(modules = [AlbumModule::class])

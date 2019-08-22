@@ -5,7 +5,7 @@ import okhttp3.Response
 import java.io.IOException
 
 /**
- * Created by DoNguyen on 9/3/19.
+ * Created by DoNguyen on 22/8/19.
  */
 class HeaderInterceptor(private val clientId: String) : Interceptor {
 
