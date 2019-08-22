@@ -1,0 +1,103 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "com.donguyen.photoalbum"
+        minSdkVersion 19
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+}
+
+ext {
+    // rx
+    rx_kotlin_version = '2.3.0'
+    rx_android_version = '2.1.1'
+
+    // dagger
+    dagger_version = '2.19'
+
+    // architecture components
+    lifecycle_version = '2.0.0'
+    paging_version = '2.1.0'
+    room_version = '2.2.0-alpha02'
+
+    retrofit_version = '2.5.0'
+    glide_version = '4.9.0'
+
+    // test
+    junit_version = '4.12'
+    mockito_version = '2.23.0'
+    test_version = '1.1.0'
+    arch_testing_version = '2.0.0'
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation 'androidx.appcompat:appcompat:1.1.0-rc01'
+    implementation 'androidx.core:core-ktx:1.2.0-alpha03'
+
+    // rx
+    implementation "io.reactivex.rxjava2:rxkotlin:$rx_kotlin_version"
+    implementation "io.reactivex.rxjava2:rxandroid:$rx_android_version"
+
+    // dagger
+    implementation "com.google.dagger:dagger:$dagger_version"
+    kapt "com.google.dagger:dagger-compiler:$dagger_version"
+
+    // lifecycle
+    implementation "androidx.lifecycle:lifecycle-extensions:$lifecycle_version"
+    implementation "androidx.lifecycle:lifecycle-common-java8:$lifecycle_version"
+
+    // paging
+    implementation "androidx.paging:paging-runtime:$paging_version"
+    implementation "androidx.paging:paging-rxjava2:$paging_version"
+
+    // room
+    implementation "androidx.room:room-runtime:$room_version"
+    implementation "androidx.room:room-rxjava2:$room_version"
+    kapt "androidx.room:room-compiler:$room_version"
+
+    // retrofit
+    implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofit_version"
+    implementation "com.squareup.retrofit2:adapter-rxjava2:$retrofit_version"
+
+    // glide
+    implementation "com.github.bumptech.glide:glide:$glide_version"
+    kapt "com.github.bumptech.glide:compiler:$glide_version"
+
+    // unit testing
+    testImplementation "junit:junit:$junit_version"
+    testImplementation "org.mockito:mockito-core:$mockito_version"
+    testImplementation "androidx.arch.core:core-testing:$arch_testing_version"
+
+    // UI testing
+//    androidTestImplementation "androidx.test:core:$test_version"
+//    androidTestImplementation "androidx.test:runner:$test_version"
+//    androidTestImplementation "androidx.test:rules:$test_version"
+//    androidTestImplementation "androidx.test.ext:junit:$test_version"
+//    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0-alpha02'
+}
